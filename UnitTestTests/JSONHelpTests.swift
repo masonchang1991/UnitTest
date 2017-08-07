@@ -47,9 +47,9 @@ class JSONHelpTests: XCTestCase {
                 
             case .success(let json):
                 
-                let object = json as! [String: Any]
+                let object = json as? [String: Any]
 
-                XCTAssert(object)
+                XCTAssert((object != nil))
                 
                 let message = object!["M"] as? String
                 
